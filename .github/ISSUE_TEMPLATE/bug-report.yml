@@ -1,0 +1,83 @@
+﻿name: Сообщить об ошибке
+description: Ошибка или неожиданное поведение HomeGuest
+title: "[BUG] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за тестирование HomeGuest.
+
+        Перед отправкой убедитесь, что в тексте и логах нет Yandex token, паролей или содержимого data/secrets.
+
+  - type: input
+    id: version
+    attributes:
+      label: Версия HomeGuest
+      placeholder: 0.2.0-beta.1
+    validations:
+      required: true
+
+  - type: input
+    id: keenetic
+    attributes:
+      label: Модель Keenetic
+      placeholder: Keenetic Ultra KN-1811
+    validations:
+      required: true
+
+  - type: input
+    id: keeneticos
+    attributes:
+      label: Версия KeeneticOS
+      placeholder: 5.x
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Описание проблемы
+      description: Что произошло?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Как воспроизвести
+      description: Перечислите действия перед возникновением ошибки.
+      placeholder: |
+        1. Открыл ...
+        2. Нажал ...
+        3. Получил ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Ожидаемый результат
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Фактический результат
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Логи
+      description: Только обезличенный фрагмент. Удалите токены, пароли и другие секреты.
+      render: shell
+
+  - type: checkboxes
+    id: secrets
+    attributes:
+      label: Проверка безопасности
+      options:
+        - label: Я проверил сообщение и удалил из него токены, пароли и другие секреты.
+          required: true

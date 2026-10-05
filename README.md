@@ -8,6 +8,41 @@
 
 [**Скачать HomeGuest 0.2.0-beta.1 для Keenetic**](https://github.com/ilinskiy/homeguest-releases/releases/download/v0.2.0-beta.1/HomeGuest-0.2.0-beta.1-Keenetic-Tester-Kit.zip) · [Описание релиза](https://github.com/ilinskiy/homeguest-releases/releases/tag/v0.2.0-beta.1) · [Сообщить об ошибке](https://github.com/ilinskiy/homeguest-releases/issues/new/choose)
 
+## Как выглядит HomeGuest
+
+### Гостевая страница
+
+Простой интерфейс для гостя: только разрешённые владельцем устройства, актуальные показания датчиков и понятные элементы управления.
+
+![Гостевая страница HomeGuest](assets/screenshot-guest-overview.png)
+
+<details>
+<summary><strong>Показать больше комнат и устройств</strong></summary>
+
+<br>
+
+![Комнаты и устройства на гостевой странице HomeGuest](assets/screenshot-guest-rooms.png)
+
+</details>
+
+### Администрирование устройств
+
+Владелец видит все устройства провайдера, их состояние и отдельно определяет, что именно будет доступно гостям.
+
+![Администрирование устройств HomeGuest](assets/screenshot-admin-devices.png)
+
+### Состояние системы
+
+Отдельная системная страница показывает версию HomeGuest, состояние базы данных, хранилища и подключения Yandex.
+
+![Системная страница HomeGuest](assets/screenshot-system-overview.png)
+
+### Обновление, QR и резервные копии
+
+HomeGuest умеет показывать гостевую ссылку и QR-код, проверять пакеты обновлений, создавать backup перед установкой и выполнять rollback.
+
+![Обновление и резервное копирование HomeGuest](assets/screenshot-update-backup.png)
+
 ---
 
 ## Зачем нужен HomeGuest

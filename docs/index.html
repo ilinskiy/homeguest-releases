@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HomeGuest — умный дом, понятный гостям</title>
+  <meta name="description" content="HomeGuest — локальная гостевая панель для умного дома: инструкции, выбранные устройства Yandex Smart Home, QR-ссылка, backup, диагностика и обновления.">
+  <meta name="theme-color" content="#0b1220">
+  <meta property="og:title" content="HomeGuest — умный дом, понятный гостям">
+  <meta property="og:description" content="Гостевая страница, инструкции и безопасный доступ к выбранным устройствам умного дома. Public Beta для Keenetic.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://raw.githubusercontent.com/ilinskiy/homeguest-releases/main/assets/screenshot-guest-overview.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="HomeGuest">
+        <span class="brand-mark">HG</span>
+        <span>HomeGuest</span>
+      </a>
+      <nav class="nav-links" aria-label="Основная навигация">
+        <a href="#features">Возможности</a>
+        <a href="#screens">Интерфейс</a>
+        <a href="#how">Как работает</a>
+        <a href="#beta">Beta</a>
+      </nav>
+      <a class="button button-small button-ghost" href="https://github.com/ilinskiy/homeguest-releases" target="_blank" rel="noreferrer">GitHub</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">PUBLIC BETA · 0.2.0-beta.1</div>
+          <h1>Умный дом,<br><span>понятный гостям.</span></h1>
+          <p class="hero-text">
+            HomeGuest превращает умный дом в простую локальную страницу: инструкции,
+            состояние датчиков и только те устройства, которыми вы разрешили управлять гостям.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://github.com/ilinskiy/homeguest-releases/releases/download/v0.2.0-beta.1/HomeGuest-0.2.0-beta.1-Keenetic-Tester-Kit.zip">
+              Скачать beta для Keenetic
+            </a>
+            <a class="button button-secondary" href="https://github.com/ilinskiy/homeguest-releases/releases/tag/v0.2.0-beta.1" target="_blank" rel="noreferrer">
+              О релизе
+            </a>
+          </div>
+          <div class="hero-meta">
+            <span>✓ Локальная веб-панель</span>
+            <span>✓ Yandex Smart Home</span>
+            <span>✓ Keenetic + Entware</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="window">
+            <div class="window-bar">
+              <span></span><span></span><span></span>
+              <div class="window-title">home.internal:8088</div>
+            </div>
+            <img src="https://raw.githubusercontent.com/ilinskiy/homeguest-releases/main/assets/screenshot-guest-overview.png" alt="Гостевая страница HomeGuest">
+          </div>
+          <div class="floating-card">
+            <strong>20.9 °C</strong>
+            <span>Температура в гостиной</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container trust-grid">
+        <div><strong>Локально</strong><span>HomeGuest работает в домашней сети</span></div>
+        <div><strong>Под контролем</strong><span>Гость видит только разрешённые устройства</span></div>
+        <div><strong>Для реального дома</strong><span>Инструкции, датчики, свет и правила в одном месте</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">ВОЗМОЖНОСТИ</div>
+          <h2>Гостям — просто.<br>Владельцу — контроль.</h2>
+          <p>HomeGuest разделяет гостевой интерфейс и администрирование, чтобы домашняя автоматизация оставалась управляемой и понятной.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card featured">
+            <div class="icon">⌂</div>
+            <h3>Гостевая страница</h3>
+            <p>Комнаты, датчики, освещение и инструкции — в одном интерфейсе, без доступа к административной части.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon">◉</div>
+            <h3>Yandex Smart Home</h3>
+            <p>HomeGuest получает состояние устройств и предоставляет гостям только разрешённые возможности.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon">QR</div>
+            <h3>QR-ссылка для гостей</h3>
+            <p>Покажите QR-код — и гостю не нужно запоминать адрес локальной страницы.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon">↻</div>
+            <h3>Обновление и rollback</h3>
+            <p>Проверка update package, backup перед установкой и возврат к предыдущей версии при необходимости.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon">DB</div>
+            <h3>Backup / Restore</h3>
+            <p>Резервные копии конфигурации HomeGuest, инструкций и пользовательских данных.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon">✓</div>
+            <h3>Диагностика</h3>
+            <p>Состояние сервиса, базы данных, провайдера, хранилища и readiness-проверки на одной странице.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="screens">
+      <div class="container">
+        <div class="section-heading compact">
+          <div class="eyebrow">ИНТЕРФЕЙС</div>
+          <h2>Без лишней сложности</h2>
+          <p>Гостевая часть показывает только нужное. Админка оставляет владельцу полный контроль над доступом.</p>
+        </div>
+
+        <div class="showcase">
+          <div class="showcase-copy">
+            <span class="pill">Для гостей</span>
+            <h3>Только разрешённые комнаты и устройства</h3>
+            <p>Можно показать состояние света, датчиков и других устройств, добавить понятные названия и комментарии.</p>
+            <ul>
+              <li>Температура и влажность</li>
+              <li>Включение/выключение и яркость</li>
+              <li>Гостевые названия и комментарии</li>
+              <li>Инструкции и изображения</li>
+            </ul>
+          </div>
+          <div class="showcase-image">
+            <img src="https://raw.githubusercontent.com/ilinskiy/homeguest-releases/main/assets/screenshot-guest-rooms.png" alt="Комнаты и устройства HomeGuest">
+          </div>
+        </div>
+
+        <div class="showcase reverse">
+          <div class="showcase-copy">
+            <span class="pill">Для владельца</span>
+            <h3>Доступ задаётся отдельно для каждого устройства</h3>
+            <p>Администратор видит все устройства провайдера, их состояние и решает, какие из них доступны гостям.</p>
+            <ul>
+              <li>Фильтрация и поиск</li>
+              <li>Guest access deny by default</li>
+              <li>Состояние устройств в реальном интерфейсе</li>
+              <li>Настройка гостевого отображения</li>
+            </ul>
+          </div>
+          <div class="showcase-image">
+            <img src="https://raw.githubusercontent.com/ilinskiy/homeguest-releases/main/assets/screenshot-admin-devices.png" alt="Администрирование устройств HomeGuest">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section-heading compact">
+          <div class="eyebrow">КАК ЭТО РАБОТАЕТ</div>
+          <h2>От установки до гостевой страницы — три шага</h2>
+        </div>
+
+        <div class="steps">
+          <article>
+            <span class="step-no">01</span>
+            <h3>Установите</h3>
+            <p>В текущей public beta HomeGuest распространяется для Keenetic с Entware / OPKG и Linux MIPSLE softfloat.</p>
+          </article>
+          <article>
+            <span class="step-no">02</span>
+            <h3>Настройте</h3>
+            <p>Мастер первоначальной настройки создаёт администратора и помогает подключить Yandex Smart Home.</p>
+          </article>
+          <article>
+            <span class="step-no">03</span>
+            <h3>Покажите гостям</h3>
+            <p>Выберите доступные устройства и поделитесь локальной ссылкой или QR-кодом гостевой страницы.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container split">
+        <div>
+          <div class="eyebrow light">СИСТЕМА</div>
+          <h2>Видно, что происходит внутри.</h2>
+          <p>HomeGuest показывает версию, состояние базы, хранилища и подключения провайдера. Диагностику можно скачать прямо из интерфейса.</p>
+          <div class="check-list">
+            <span>✓ health / readiness</span>
+            <span>✓ проверка базы данных</span>
+            <span>✓ single-instance protection</span>
+            <span>✓ supervisor / autorestart</span>
+          </div>
+        </div>
+        <div class="dark-shot">
+          <img src="https://raw.githubusercontent.com/ilinskiy/homeguest-releases/main/assets/screenshot-system-overview.png" alt="Системная страница HomeGuest">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="beta">
+      <div class="container beta-card">
+        <div>
+          <div class="eyebrow">PUBLIC BETA</div>
+          <h2>Помогите проверить HomeGuest на разных Keenetic</h2>
+          <p>
+            Сейчас особенно полезны установки на разных моделях Keenetic. Если HomeGuest установился,
+            работает с Yandex Smart Home или, наоборот, вы нашли проблему — оставьте Issue.
+          </p>
+          <div class="beta-actions">
+            <a class="button button-primary" href="https://github.com/ilinskiy/homeguest-releases/releases/tag/v0.2.0-beta.1" target="_blank" rel="noreferrer">Открыть beta-релиз</a>
+            <a class="button button-secondary" href="https://github.com/ilinskiy/homeguest-releases/issues/new/choose" target="_blank" rel="noreferrer">Сообщить об ошибке</a>
+          </div>
+        </div>
+        <div class="beta-stats">
+          <div><strong>0.2.0-beta.1</strong><span>текущая версия</span></div>
+          <div><strong>Keenetic</strong><span>главная beta-платформа</span></div>
+          <div><strong>MIPSLE</strong><span>текущая публичная архитектура</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq">
+      <div class="container">
+        <div class="section-heading compact">
+          <div class="eyebrow">FAQ</div>
+          <h2>Коротко о главном</h2>
+        </div>
+        <div class="faq-grid">
+          <article>
+            <h3>HomeGuest работает через интернет?</h3>
+            <p>Основной интерфейс HomeGuest предназначен для работы внутри домашней сети. Для интеграции с Yandex Smart Home используется подключение к провайдеру.</p>
+          </article>
+          <article>
+            <h3>Гость увидит все мои устройства?</h3>
+            <p>Нет. Доступ задаётся владельцем отдельно. Подход HomeGuest — deny by default: устройство не показывается гостю, пока вы его явно не разрешили.</p>
+          </article>
+          <article>
+            <h3>Где хранится Yandex token?</h3>
+            <p>Токен хранится локально HomeGuest и не показывается обратно через интерфейс или API.</p>
+          </article>
+          <article>
+            <h3>Это уже стабильная версия?</h3>
+            <p>Нет. 0.2.0-beta.1 — публичная beta для тестирования. Перед экспериментами с обновлениями рекомендуется делать резервную копию.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container">
+        <div class="final-box">
+          <div>
+            <span class="eyebrow light">HOMEGUEST 0.2.0-beta.1</span>
+            <h2>Попробуйте HomeGuest на своём Keenetic.</h2>
+            <p>Скачайте tester kit, установите HomeGuest и расскажите, как он работает в вашем доме.</p>
+          </div>
+          <a class="button button-white" href="https://github.com/ilinskiy/homeguest-releases/releases/download/v0.2.0-beta.1/HomeGuest-0.2.0-beta.1-Keenetic-Tester-Kit.zip">Скачать beta</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <div>
+        <strong>HomeGuest</strong>
+        <span>Public Beta · 2026</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/ilinskiy/homeguest-releases" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://github.com/ilinskiy/homeguest-releases/releases" target="_blank" rel="noreferrer">Releases</a>
+        <a href="https://github.com/ilinskiy/homeguest-releases/issues" target="_blank" rel="noreferrer">Issues</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

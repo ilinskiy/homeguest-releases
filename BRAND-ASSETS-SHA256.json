@@ -1,0 +1,17 @@
+[
+  {
+    "file": "assets/homeguest-logo-horizontal.png",
+    "sha256": "3ad49a6b2fe0b9baf4f3f444367afb4913e779830adf22a0b5a7213ca6792572",
+    "size_bytes": 227312
+  },
+  {
+    "file": "assets/homeguest-logo-mark.png",
+    "sha256": "58f24bd6888a8a41783d7beeaccf76abbd5c5a4c454036ec866df6c0c9421856",
+    "size_bytes": 273917
+  },
+  {
+    "file": "assets/homeguest-logo-stacked.png",
+    "sha256": "b141c89fa9b7942eea810b9daa9dc1c1ab4020d3ec36ae053c2369b8b897cdef",
+    "size_bytes": 237725
+  }
+]

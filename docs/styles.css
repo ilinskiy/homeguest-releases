@@ -32,10 +32,12 @@ img{display:block;max-width:100%}
   border-bottom:1px solid rgba(223,229,236,.72);
 }
 .nav{height:72px;display:flex;align-items:center;gap:28px}
-.brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:19px;letter-spacing:-.02em}
-.brand-mark{
-  display:grid;place-items:center;width:34px;height:34px;border-radius:10px;
-  background:linear-gradient(135deg,var(--dark),#223451);color:#fff;font-size:12px;letter-spacing:.04em
+.brand{display:inline-flex;align-items:center}
+.brand-logo-frame{
+  display:block;width:168px;height:42px;overflow:hidden;flex:0 0 auto
+}
+.brand-logo{
+  width:198px;max-width:none;height:auto;transform:translate(-15px,-28px)
 }
 .nav-links{display:flex;gap:28px;margin-left:auto;color:#475467;font-size:14px}
 .nav-links a:hover{color:var(--text)}
@@ -166,7 +168,9 @@ img{display:block;max-width:100%}
 
 .footer{border-top:1px solid var(--line);background:#fff}
 .footer-row{min-height:96px;display:flex;align-items:center;justify-content:space-between;gap:30px}
-.footer-row>div:first-child{display:flex;gap:14px;align-items:baseline}
+.footer-row>div:first-child{display:flex;gap:14px;align-items:center}
+.footer-logo-frame{width:136px;height:34px}
+.footer-logo-frame .brand-logo{width:160px;transform:translate(-12px,-23px)}
 .footer-row span{color:#98a2b3;font-size:13px}
 .footer-links{display:flex;gap:24px;color:#667085;font-size:14px}
 
@@ -184,6 +188,10 @@ img{display:block;max-width:100%}
 @media (max-width:700px){
   .container{width:min(100% - 28px,1180px)}
   .nav{height:64px}
+  .brand-logo-frame{width:145px;height:38px}
+  .brand-logo{width:171px;transform:translate(-13px,-24px)}
+  .footer-logo-frame{width:128px;height:32px}
+  .footer-logo-frame .brand-logo{width:151px;transform:translate(-11px,-22px)}
   .button-small{display:none}
   .hero{padding:44px 0 50px}
   .hero h1{font-size:47px}

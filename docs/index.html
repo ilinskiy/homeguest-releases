@@ -10,14 +10,16 @@
   <meta property="og:description" content="Гостевая страница, инструкции и безопасный доступ к выбранным устройствам умного дома. Public Beta для Keenetic.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://raw.githubusercontent.com/ilinskiy/homeguest-releases/main/assets/screenshot-guest-overview.png">
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/ilinskiy/homeguest-releases/main/assets/homeguest-logo-mark.png">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <header class="topbar">
     <div class="container nav">
       <a class="brand" href="#top" aria-label="HomeGuest">
-        <span class="brand-mark">HG</span>
-        <span>HomeGuest</span>
+        <span class="brand-logo-frame" aria-hidden="true">
+          <img class="brand-logo" src="https://raw.githubusercontent.com/ilinskiy/homeguest-releases/main/assets/homeguest-logo-horizontal.png" alt="">
+        </span>
       </a>
       <nav class="nav-links" aria-label="Основная навигация">
         <a href="#features">Возможности</a>
@@ -277,7 +279,9 @@
   <footer class="footer">
     <div class="container footer-row">
       <div>
-        <strong>HomeGuest</strong>
+        <span class="brand-logo-frame footer-logo-frame" aria-hidden="true">
+          <img class="brand-logo" src="https://raw.githubusercontent.com/ilinskiy/homeguest-releases/main/assets/homeguest-logo-horizontal.png" alt="">
+        </span>
         <span>Public Beta · 2026</span>
       </div>
       <div class="footer-links">

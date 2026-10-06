@@ -4,9 +4,9 @@
 
 **HomeGuest** — локальное веб-приложение для домашней сети. Оно объединяет гостевые инструкции по дому и безопасный доступ к выбранным устройствам умного дома в одной простой веб-странице.
 
-Текущая публичная версия: **0.2.0-beta.1**
+Текущая публичная версия: **0.2.0-beta.2**
 
-[**Скачать HomeGuest 0.2.0-beta.1 для Keenetic**](https://github.com/ilinskiy/homeguest-releases/releases/download/v0.2.0-beta.1/HomeGuest-0.2.0-beta.1-Keenetic-Tester-Kit.zip) · [Описание релиза](https://github.com/ilinskiy/homeguest-releases/releases/tag/v0.2.0-beta.1) · [Сообщить об ошибке](https://github.com/ilinskiy/homeguest-releases/issues/new/choose)
+[**Скачать HomeGuest 0.2.0-beta.2 для Keenetic**](https://github.com/ilinskiy/homeguest-releases/releases/download/v0.2.0-beta.2/HomeGuest-0.2.0-beta.2-Keenetic-Tester-Kit.zip) · [Описание релиза](https://github.com/ilinskiy/homeguest-releases/releases/tag/v0.2.0-beta.2) · [Сообщить об ошибке](https://github.com/ilinskiy/homeguest-releases/issues/new/choose)
 
 ## Как выглядит HomeGuest
 
@@ -62,7 +62,7 @@ HomeGuest создаёт одну локальную страницу, где г
 
 ## Основные возможности
 
-| Возможность | Beta.1 |
+| Возможность | Beta.2 |
 |---|:---:|
 | Гостевая веб-страница | ✅ |
 | Инструкции по помещениям и оборудованию | ✅ |
@@ -73,6 +73,8 @@ HomeGuest создаёт одну локальную страницу, где г
 | Температура и влажность | ✅ |
 | Выбор устройств, доступных гостям | ✅ |
 | Отдельные гостевые названия и комментарии | ✅ |
+| Произвольные комнаты HomeGuest | ✅ |
+| Произвольные устройства без Yandex | ✅ |
 | QR-код гостевой страницы | ✅ |
 | Мастер первоначальной настройки | ✅ |
 | Backup / Restore | ✅ |
@@ -97,7 +99,7 @@ HomeGuest устанавливается на устройство в домаш
 
 Для первой установки скачайте готовый комплект:
 
-**[HomeGuest-0.2.0-beta.1-Keenetic-Tester-Kit.zip](https://github.com/ilinskiy/homeguest-releases/releases/download/v0.2.0-beta.1/HomeGuest-0.2.0-beta.1-Keenetic-Tester-Kit.zip)**
+**[HomeGuest-0.2.0-beta.2-Keenetic-Tester-Kit.zip](https://github.com/ilinskiy/homeguest-releases/releases/download/v0.2.0-beta.2/HomeGuest-0.2.0-beta.2-Keenetic-Tester-Kit.zip)**
 
 SHA256:
 
@@ -133,11 +135,11 @@ INSTALL-KEENETIC.md
 - укажите Yandex token;
 - проверьте подключение;
 - завершите настройку;
-- настройте гостевые инструкции и доступные устройства.
+- настройте гостевые инструкции, произвольные комнаты и доступные устройства.
 
 ## Совместимость
 
-Публичная beta.1 сейчас распространяется для следующей платформы:
+Публичная beta.2 сейчас распространяется для следующей платформы:
 
 | Платформа | Архитектура | Статус |
 |---|---|---|
@@ -166,9 +168,9 @@ INSTALL-KEENETIC.md
 
 **[Создать Bug Report](https://github.com/ilinskiy/homeguest-releases/issues/new/choose)**
 
-## Что уже проверено в beta.1
+## Что уже проверено в beta.2
 
-Перед публичным выпуском beta.1 были проверены:
+Перед публичным выпуском beta.2 были проверены:
 
 - локальные Go tests;
 - `go vet`;
@@ -183,9 +185,12 @@ INSTALL-KEENETIC.md
 - backup перед обновлением;
 - self-update;
 - rollback;
+- миграция beta.1 → beta.2;
+- ручные комнаты и устройства;
+- Backup / Restore ручных данных.
 - health/readiness и проверка базы данных.
 
-Подробнее: [RELEASE-NOTES-0.2.0-beta.1.md](RELEASE-NOTES-0.2.0-beta.1.md)
+Подробнее: [RELEASE-NOTES-0.2.0-beta.2.md](RELEASE-NOTES-0.2.0-beta.2.md)
 
 ## Безопасность
 
@@ -209,7 +214,7 @@ HomeGuest находится в стадии beta-тестирования.
 
 Текущий релиз:
 
-**[HomeGuest 0.2.0-beta.1 — Public Beta for Keenetic](https://github.com/ilinskiy/homeguest-releases/releases/tag/v0.2.0-beta.1)**
+**[HomeGuest 0.2.0-beta.2 — Public Beta for Keenetic](https://github.com/ilinskiy/homeguest-releases/releases/tag/v0.2.0-beta.2)**
 
 История изменений: [CHANGELOG.md](CHANGELOG.md)
 
@@ -232,6 +237,6 @@ HomeGuest находится в стадии beta-тестирования.
 
 ---
 
-**HomeGuest 0.2.0-beta.1** · Public Beta · 2026
+**HomeGuest 0.2.0-beta.2** · Public Beta · 2026
 
 Copyright © 2026 HomeGuest. All rights reserved.

@@ -4,9 +4,9 @@
 
 **HomeGuest** — локальное веб-приложение для домашней сети. Оно объединяет гостевые инструкции по дому и безопасный доступ к выбранным устройствам умного дома в одной простой веб-странице.
 
-Текущая публичная версия: **0.2.0-beta.2**
+Текущая публичная версия: **0.3.0**
 
-[**Скачать HomeGuest 0.2.0-beta.2 для Keenetic**](https://github.com/ilinskiy/homeguest-releases/releases/download/v0.2.0-beta.2/HomeGuest-0.2.0-beta.2-Keenetic-Tester-Kit.zip) · [Описание релиза](https://github.com/ilinskiy/homeguest-releases/releases/tag/v0.2.0-beta.2) · [Сообщить об ошибке](https://github.com/ilinskiy/homeguest-releases/issues/new/choose)
+[**Скачать HomeGuest 0.3.0 для Keenetic**](https://github.com/ilinskiy/homeguest-releases/releases/download/v0.3.0/HomeGuest-0.3.0-Keenetic-Tester-Kit.zip) · [Описание релиза](https://github.com/ilinskiy/homeguest-releases/releases/tag/v0.3.0) · [Сообщить об ошибке](https://github.com/ilinskiy/homeguest-releases/issues/new/choose)
 
 ## Как выглядит HomeGuest
 
@@ -62,7 +62,7 @@ HomeGuest создаёт одну локальную страницу, где г
 
 ## Основные возможности
 
-| Возможность | Beta.2 |
+| Возможность | 0.3.0 |
 |---|:---:|
 | Гостевая веб-страница | ✅ |
 | Инструкции по помещениям и оборудованию | ✅ |
@@ -84,6 +84,9 @@ HomeGuest создаёт одну локальную страницу, где г
 | Проверка update package | ✅ |
 | Backup перед обновлением | ✅ |
 | Обновление и rollback | ✅ |
+| Гостевые сценарии | ✅ |
+| Несколько действий в одном сценарии | ✅ |
+| Предварительная проверка прав сценария | ✅ |
 
 ## Как это работает
 
@@ -99,12 +102,12 @@ HomeGuest устанавливается на устройство в домаш
 
 Для первой установки скачайте готовый комплект:
 
-**[HomeGuest-0.2.0-beta.2-Keenetic-Tester-Kit.zip](https://github.com/ilinskiy/homeguest-releases/releases/download/v0.2.0-beta.2/HomeGuest-0.2.0-beta.2-Keenetic-Tester-Kit.zip)**
+**[HomeGuest-0.3.0-Keenetic-Tester-Kit.zip](https://github.com/ilinskiy/homeguest-releases/releases/download/v0.3.0/HomeGuest-0.3.0-Keenetic-Tester-Kit.zip)**
 
 SHA256:
 
 ```text
-066533cf34bd5bae230b70770a239047728663129a2e71cec802c0ab3d44a961
+A96CC18277CF73A16A2932813ADFCBC3C813EB467D0F5F91F06194829E77825F
 ```
 
 ### 2. Прочитать инструкцию
@@ -139,7 +142,7 @@ INSTALL-KEENETIC.md
 
 ## Совместимость
 
-Публичная beta.2 сейчас распространяется для следующей платформы:
+Публичная версия 0.3.0 сейчас распространяется для следующей платформы:
 
 | Платформа | Архитектура | Статус |
 |---|---|---|
@@ -168,9 +171,9 @@ INSTALL-KEENETIC.md
 
 **[Создать Bug Report](https://github.com/ilinskiy/homeguest-releases/issues/new/choose)**
 
-## Что уже проверено в beta.2
+## Что уже проверено в 0.3.0
 
-Перед публичным выпуском beta.2 были проверены:
+Перед публичным выпуском 0.3.0 были проверены:
 
 - локальные Go tests;
 - `go vet`;
@@ -187,10 +190,15 @@ INSTALL-KEENETIC.md
 - rollback;
 - миграция beta.1 → beta.2;
 - ручные комнаты и устройства;
-- Backup / Restore ручных данных.
+- Backup / Restore ручных данных;
+- локальные сценарии HomeGuest;
+- сценарий «Включить + Яркость 35%»;
+- запрет guest control;
+- atomic preflight сценария;
+- обновление 0.2.0-beta.2 → 0.3.0 на реальном Keenetic;
 - health/readiness и проверка базы данных.
 
-Подробнее: [RELEASE-NOTES-0.2.0-beta.2.md](RELEASE-NOTES-0.2.0-beta.2.md)
+Подробнее: [RELEASE-NOTES-0.3.0.md](RELEASE-NOTES-0.3.0.md)
 
 ## Безопасность
 
@@ -214,7 +222,7 @@ HomeGuest находится в стадии beta-тестирования.
 
 Текущий релиз:
 
-**[HomeGuest 0.2.0-beta.2 — Public Beta for Keenetic](https://github.com/ilinskiy/homeguest-releases/releases/tag/v0.2.0-beta.2)**
+**[HomeGuest 0.3.0 — Public Beta for Keenetic](https://github.com/ilinskiy/homeguest-releases/releases/tag/v0.3.0)**
 
 История изменений: [CHANGELOG.md](CHANGELOG.md)
 
@@ -237,6 +245,6 @@ HomeGuest находится в стадии beta-тестирования.
 
 ---
 
-**HomeGuest 0.2.0-beta.2** · Public Beta · 2026
+**HomeGuest 0.3.0** · Public Beta · 2026
 
 Copyright © 2026 HomeGuest. All rights reserved.

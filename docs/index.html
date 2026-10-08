@@ -3,293 +3,118 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="HomeGuest — локальная страница дома для гостей. Инструкции, комнаты и управление разрешёнными устройствами. Попробуйте демо и выберите платформу запуска.">
+  <meta name="theme-color" content="#f6f7f5">
+  <link rel="canonical" href="https://gethomeguest.com/">
   <title>HomeGuest — умный дом, понятный гостям</title>
-  <meta name="description" content="HomeGuest — локальная гостевая панель для умного дома: инструкции, выбранные устройства Yandex Smart Home, голосовые сообщения через Яндекс Станции, backup, диагностика и обновления.">
-  <meta name="theme-color" content="#0b1220">
-  <meta property="og:title" content="HomeGuest — умный дом, понятный гостям">
-  <meta property="og:description" content="Гостевая страница, инструкции и безопасный доступ к выбранным устройствам умного дома. Public Beta для Keenetic.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://raw.githubusercontent.com/ilinskiy/homeguest-releases/main/assets/screenshot-guest-overview.png">
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/ilinskiy/homeguest-releases/main/assets/homeguest-logo-mark.png">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" href="assets/homeguest-logo-mark.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container nav">
-      <a class="brand" href="#top" aria-label="HomeGuest">
-        <span class="brand-logo-frame" aria-hidden="true">
-          <img class="brand-logo" src="https://raw.githubusercontent.com/ilinskiy/homeguest-releases/main/assets/homeguest-logo-horizontal.png" alt="">
-        </span>
-      </a>
-      <nav class="nav-links" aria-label="Основная навигация">
-        <a href="#features">Возможности</a>
-        <a href="#screens">Интерфейс</a>
-        <a href="#how">Как работает</a>
-        <a href="#beta">Beta</a>
-      </nav>
-      <a class="button button-small button-ghost" href="https://github.com/ilinskiy/homeguest-releases" target="_blank" rel="noreferrer">GitHub</a>
+  <svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-house" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10H3Z M9 20v-7h6v7"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 5v15M3 4h5l4 2 4-2h5v14h-5l-4 2-4-2H3Z"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M8 16c0-3-3-3-3-7a7 7 0 0 1 14 0c0 4-3 4-3 7ZM9 20h6M10 23h4"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 3 8 3v6c0 5-8 9-8 9S4 17 4 12V6Z m-4 9 3 3 5-6"/></symbol>
+    <symbol id="i-router" viewBox="0 0 24 24"><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M6 13V4m12 9V4M7 17h1m4 0h1"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="1"/><path d="M8 21h8m-4-4v4"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="7" rx="1"/><rect x="3" y="14" width="18" height="7" rx="1"/><path d="M7 6.5h1M7 17.5h1m5-11h4m-4 11h4"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="1"/><path d="M15 8V3H3v13h5"/></symbol>
+    <symbol id="i-voice" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="13" rx="3"/><path d="M5 11a7 7 0 0 0 14 0m-7 7v4m-4 0h8"/></symbol>
+  </defs></svg>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <header class="site-header">
+    <div class="container nav-row">
+      <a class="brand" href="#top" aria-label="HomeGuest — в начало"><img src="assets/homeguest-logo-horizontal.png" alt="HomeGuest" width="1800" height="880"></a>
+      <nav class="main-nav" aria-label="Основная навигация"><a href="#features">Возможности</a><a href="#experience">Знакомство</a><a href="#start">Запуск</a></nav>
+      <a class="header-link" href="https://github.com/ilinskiy/homeguest-releases" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
     </div>
   </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <div class="eyebrow">PUBLIC BETA · 0.4.0</div>
-          <h1>Умный дом,<br><span>понятный гостям.</span></h1>
-          <p class="hero-text">
-            HomeGuest превращает умный дом в простую локальную страницу: инструкции, голосовые сообщения через Яндекс Станции,
-            произвольные комнаты, состояние датчиков и только те устройства, которые вы решили показать гостям.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="https://github.com/ilinskiy/homeguest-releases/releases/download/v0.4.0/HomeGuest-0.4.0-Keenetic-Tester-Kit.zip">
-              Скачать beta для Keenetic
-            </a>
-            <a class="button button-secondary" href="https://github.com/ilinskiy/homeguest-releases/releases/tag/v0.4.0" target="_blank" rel="noreferrer">
-              О релизе
-            </a>
-          </div>
-          <div class="hero-meta">
-            <span>✓ Локальная веб-панель</span>
-            <span>✓ Yandex Smart Home</span>
-            <span>✓ Keenetic + Entware</span>
+  <main id="main">
+    <section class="hero container" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> ВАШ ДОМ. ВАШИ ПРАВИЛА.</p>
+        <h1>Умный дом.<br><span>Понятный<br class="mobile-break"> гостям.</span></h1>
+        <p class="hero-description">Как включить свет, где найти пульт, какая температура в комнате — одна страница отвечает на привычные вопросы.</p>
+        <div class="hero-actions"><a class="button primary" href="#experience">Попробовать демо <svg class="icon"><use href="#i-arrow"/></svg></a><a class="text-link" href="#start">Выбрать платформу <span aria-hidden="true">↗</span></a></div>
+        <p class="hero-note">Открывается в браузере. Работает в домашней сети.</p>
+      </div>
+      <div class="hero-stage" aria-label="Пример гостевой страницы HomeGuest">
+        <div class="stage-grid" aria-hidden="true"></div>
+        <div class="hero-window">
+          <div class="window-top"><span class="window-dots" aria-hidden="true">● ● ●</span><span>home.internal:8088</span><svg class="icon"><use href="#i-shield"/></svg></div>
+          <div class="preview-body">
+            <div class="preview-label">HOMEGUEST <span>ГОСТЕВАЯ СТРАНИЦА</span></div>
+            <h2>Добро пожаловать<br>домой.</h2><p>Всё, что нужно для комфортного отдыха.</p>
+            <div class="preview-room"><svg class="icon"><use href="#i-house"/></svg><span>Гостиная</span><span class="preview-room-count">3 устройства</span></div>
+            <div class="preview-sensors"><div><span>Температура</span><strong>23.4<small> °C</small></strong></div><div><span>Влажность</span><strong>42<small> %</small></strong></div></div>
+            <div class="preview-light"><span class="device-icon"><svg class="icon"><use href="#i-bulb"/></svg></span><div><strong>Основной свет</strong><span>Включён · яркость 60%</span></div><span class="switch-decoration" aria-hidden="true"></span></div>
+            <div class="preview-instruction"><svg class="icon"><use href="#i-book"/></svg><span>Как включить телевизор</span><span aria-hidden="true">↗</span></div>
           </div>
         </div>
+        <div class="stage-caption"><span class="mini-line"></span> ИНСТРУКЦИИ + УПРАВЛЕНИЕ + СПОКОЙСТВИЕ</div>
+        <span class="stage-coordinate" aria-hidden="true">HG / 01</span>
+      </div>
+    </section>
+    <div class="principles container"><p><svg class="icon"><use href="#i-house"/></svg> Локальная страница дома</p><p><svg class="icon"><use href="#i-shield"/></svg> Только разрешённые устройства</p><p><svg class="icon"><use href="#i-monitor"/></svg> Телефон, планшет, компьютер</p></div>
 
-        <div class="hero-visual">
-          <div class="window">
-            <div class="window-bar">
-              <span></span><span></span><span></span>
-              <div class="window-title">home.internal:8088</div>
-            </div>
-            <img src="https://raw.githubusercontent.com/ilinskiy/homeguest-releases/main/assets/screenshot-guest-overview.png" alt="Гостевая страница HomeGuest">
-          </div>
-          <div class="floating-card">
-            <strong>20.9 °C</strong>
-            <span>Температура в гостиной</span>
-          </div>
-        </div>
+    <section class="section container" id="features">
+      <div class="section-heading"><p class="eyebrow">01 / ВОЗМОЖНОСТИ</p><h2>Меньше объяснений.<br>Больше гостеприимства.</h2><p class="section-lead">Соберите знания о доме в одном месте.<br>Дайте гостям ровно столько доступа, сколько нужно.</p></div>
+      <div class="feature-grid">
+        <article class="feature"><span class="feature-number">01</span><svg class="icon"><use href="#i-book"/></svg><h3>Инструкции под рукой</h3><p>Текст, изображения и ссылки по комнатам и оборудованию. Правила дома — на той же странице.</p></article>
+        <article class="feature"><span class="feature-number">02</span><svg class="icon"><use href="#i-bulb"/></svg><h3>Дом отвечает на действия</h3><p>Состояние выбранных устройств, управление светом и гостевые сценарии с несколькими действиями.</p></article>
+        <article class="feature"><span class="feature-number">03</span><span class="feature-typographic-icon" aria-hidden="true">°C</span><h3>Климат без догадок</h3><p>Температура и влажность с подключённых датчиков. Понятные названия и комментарии владельца.</p></article>
+        <article class="feature"><span class="feature-number">04</span><svg class="icon"><use href="#i-house"/></svg><h3>Каждой комнате — своё</h3><p>Произвольные комнаты и устройства, даже без Yandex. Удобная структура для конкретного дома.</p></article>
+        <article class="feature"><span class="feature-number">05</span><span class="feature-typographic-icon small" aria-hidden="true">QR</span><h3>Один адрес для гостя</h3><p>Гость подключается к Wi-Fi и открывает страницу по ссылке или QR-коду. Приложение устанавливать не нужно.</p></article>
+        <article class="feature"><span class="feature-number">06</span><svg class="icon"><use href="#i-shield"/></svg><h3>Контроль у владельца</h3><p>Отдельная админ-панель, выбор доступных устройств, резервные копии, диагностика и откат обновлений.</p></article>
       </div>
     </section>
 
-    <section class="trust-strip">
-      <div class="container trust-grid">
-        <div><strong>Локально</strong><span>HomeGuest работает в домашней сети</span></div>
-        <div><strong>Под контролем</strong><span>Гость видит только разрешённые устройства</span></div>
-        <div><strong>Для реального дома</strong><span>Инструкции, датчики, свет и правила в одном месте</span></div>
-      </div>
-    </section>
-
-    <section class="section" id="features">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">ВОЗМОЖНОСТИ</div>
-          <h2>Гостям — просто.<br>Владельцу — контроль.</h2>
-          <p>HomeGuest разделяет гостевой интерфейс и администрирование, чтобы домашняя автоматизация оставалась управляемой и понятной.</p>
-        </div>
-
-        <div class="feature-grid">
-          <article class="feature-card featured">
-            <div class="icon">⌂</div>
-            <h3>Гостевая страница</h3>
-            <p>Комнаты, датчики, освещение и инструкции — в одном интерфейсе, без доступа к административной части.</p>
-          </article>
-          <article class="feature-card">
-            <div class="icon">◉</div>
-            <h3>Yandex Smart Home</h3>
-            <p>HomeGuest получает состояние устройств и предоставляет гостям только разрешённые возможности.</p>
-          </article>
-          <article class="feature-card">
-            <div class="icon">QR</div>
-            <h3>QR-ссылка для гостей</h3>
-            <p>Покажите QR-код — и гостю не нужно запоминать адрес локальной страницы.</p>
-          </article>
-          <article class="feature-card">
-            <div class="icon">↻</div>
-            <h3>Обновление и rollback</h3>
-            <p>Проверка update package, backup перед установкой и возврат к предыдущей версии при необходимости.</p>
-          </article>
-          <article class="feature-card">
-            <div class="icon">DB</div>
-            <h3>Backup / Restore</h3>
-            <p>Резервные копии конфигурации HomeGuest, инструкций и пользовательских данных.</p>
-          </article>
-          <article class="feature-card">
-            <div class="icon">✓</div>
-            <h3>Диагностика</h3>
-            <p>Состояние сервиса, базы данных, провайдера, хранилища и readiness-проверки на одной странице.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft" id="screens">
-      <div class="container">
-        <div class="section-heading compact">
-          <div class="eyebrow">ИНТЕРФЕЙС</div>
-          <h2>Без лишней сложности</h2>
-          <p>Гостевая часть показывает только нужное. Админка оставляет владельцу полный контроль над доступом.</p>
-        </div>
-
-        <div class="showcase">
-          <div class="showcase-copy">
-            <span class="pill">Для гостей</span>
-            <h3>Только разрешённые комнаты и устройства</h3>
-            <p>Можно показать состояние света, датчиков и других устройств, добавить понятные названия и комментарии.</p>
-            <ul>
-              <li>Температура и влажность</li>
-              <li>Включение/выключение и яркость</li>
-              <li>Гостевые названия и комментарии</li>
-              <li>Инструкции и изображения</li>
-            </ul>
+    <section class="experience-section" id="experience">
+      <div class="container experience-grid">
+        <div class="experience-copy"><p class="eyebrow">02 / ПОЧУВСТВУЙТЕ СЕБЯ ГОСТЕМ</p><h2>Три шага.<br>И вы уже дома.</h2><p class="section-lead">Попробуйте, как устроен HomeGuest.<br>Все действия в этом демо — виртуальные.</p>
+          <div class="tour-steps" role="tablist" aria-label="Шаги знакомства" aria-orientation="vertical">
+            <button class="tour-step active" role="tab" aria-selected="true" aria-controls="tour-panel" id="step-1" data-step="1"><span class="step-number">01</span><span><strong>Выберите комнату</strong><small>Найдите то, что нужно именно здесь.</small></span><span class="step-arrow" aria-hidden="true">→</span></button>
+            <button class="tour-step" role="tab" aria-selected="false" aria-controls="tour-panel" id="step-2" data-step="2" tabindex="-1"><span class="step-number">02</span><span><strong>Откройте инструкцию</strong><small>Понятные действия вместо длинных объяснений.</small></span><span class="step-arrow" aria-hidden="true">→</span></button>
+            <button class="tour-step" role="tab" aria-selected="false" aria-controls="tour-panel" id="step-3" data-step="3" tabindex="-1"><span class="step-number">03</span><span><strong>Управляйте домом</strong><small>Включите свет или запустите сценарий.</small></span><span class="step-arrow" aria-hidden="true">→</span></button>
           </div>
-          <div class="showcase-image">
-            <img src="https://raw.githubusercontent.com/ilinskiy/homeguest-releases/main/assets/screenshot-guest-rooms.png" alt="Комнаты и устройства HomeGuest">
-          </div>
+          <div class="tour-bottom"><span id="tour-progress">Шаг 1 из 3</span><button class="text-button" id="reset-demo">Начать заново ↻</button></div>
         </div>
-
-        <div class="showcase reverse">
-          <div class="showcase-copy">
-            <span class="pill">Для владельца</span>
-            <h3>Доступ задаётся отдельно для каждого устройства</h3>
-            <p>Администратор видит устройства провайдера, может добавлять собственные комнаты и информационные устройства HomeGuest и решает, что именно доступно гостям.</p>
-            <ul>
-              <li>Фильтрация и поиск</li>
-              <li>Guest access deny by default</li>
-              <li>Состояние устройств в реальном интерфейсе</li>
-              <li>Настройка гостевого отображения</li>
-            </ul>
-          </div>
-          <div class="showcase-image">
-            <img src="https://raw.githubusercontent.com/ilinskiy/homeguest-releases/main/assets/screenshot-admin-devices.png" alt="Администрирование устройств HomeGuest">
-          </div>
-        </div>
+        <div class="demo-wrapper"><div class="demo-browser-bar"><span>HOMEGUEST</span><span class="demo-badge">ИНТЕРАКТИВНОЕ ДЕМО</span></div><div id="tour-panel" class="demo-panel" role="tabpanel" aria-labelledby="step-1" tabindex="0"></div></div>
       </div>
     </section>
 
-    <section class="section" id="how">
-      <div class="container">
-        <div class="section-heading compact">
-          <div class="eyebrow">КАК ЭТО РАБОТАЕТ</div>
-          <h2>От установки до гостевой страницы — три шага</h2>
-        </div>
-
-        <div class="steps">
-          <article>
-            <span class="step-no">01</span>
-            <h3>Установите</h3>
-            <p>В текущей public beta HomeGuest распространяется для Keenetic с Entware / OPKG и Linux MIPSLE softfloat.</p>
-          </article>
-          <article>
-            <span class="step-no">02</span>
-            <h3>Настройте</h3>
-            <p>Мастер первоначальной настройки создаёт администратора и помогает подключить Yandex Smart Home.</p>
-          </article>
-          <article>
-            <span class="step-no">03</span>
-            <h3>Покажите гостям</h3>
-            <p>Выберите доступные устройства и поделитесь локальной ссылкой или QR-кодом гостевой страницы.</p>
-          </article>
-        </div>
-      </div>
+    <section class="owner-section container">
+      <div class="owner-copy"><p class="eyebrow">ВЫ РЕШАЕТЕ, ЧТО ВИДНО ГОСТЮ</p><h2>Ваш дом<br>остаётся вашим.</h2><p>HomeGuest разделяет гостевую страницу и настройки владельца. Для каждого устройства вы выбираете видимость и разрешение на управление.</p><ul class="check-list"><li><svg class="icon"><use href="#i-check"/></svg> Свои названия и инструкции</li><li><svg class="icon"><use href="#i-check"/></svg> Доступ только к выбранным устройствам</li><li><svg class="icon"><use href="#i-check"/></svg> Backup и восстановление настроек</li></ul></div>
+      <figure class="owner-figure"><div class="screenshot-frame"><img src="assets/screenshot-admin-devices.png" alt="Реальная административная панель HomeGuest: устройства, переключатели гостевой видимости и управления" width="1350" height="970" loading="lazy"></div><figcaption><span class="status-dot"></span> Реальный интерфейс HomeGuest</figcaption></figure>
     </section>
 
-    <section class="section section-dark">
-      <div class="container split">
-        <div>
-          <div class="eyebrow light">СИСТЕМА</div>
-          <h2>Видно, что происходит внутри.</h2>
-          <p>HomeGuest показывает версию, состояние базы, хранилища и подключения провайдера. Диагностику можно скачать прямо из интерфейса.</p>
-          <div class="check-list">
-            <span>✓ health / readiness</span>
-            <span>✓ проверка базы данных</span>
-            <span>✓ single-instance protection</span>
-            <span>✓ supervisor / autorestart</span>
-          </div>
-        </div>
-        <div class="dark-shot">
-          <img src="https://raw.githubusercontent.com/ilinskiy/homeguest-releases/main/assets/screenshot-system-overview.png" alt="Системная страница HomeGuest">
-        </div>
+    <section class="section start-section container" id="start">
+      <div class="section-heading"><p class="eyebrow">03 / ЗАПУСК</p><h2>Начните со своей платформы.</h2><p class="section-lead">Выберите, где будет работать HomeGuest.<br>Инструкция ниже подстроится под ваш выбор.</p></div>
+      <div class="platform-tabs" role="tablist" aria-label="Платформа запуска">
+        <button class="platform-tab active" role="tab" aria-selected="true" aria-controls="platform-panel" id="platform-keenetic" data-platform="keenetic"><svg class="icon"><use href="#i-router"/></svg><span><strong>Keenetic</strong><small>Public Beta · MIPSLE</small></span><span class="platform-indicator" aria-hidden="true"></span></button>
+        <button class="platform-tab" role="tab" aria-selected="false" aria-controls="platform-panel" id="platform-windows" data-platform="windows" tabindex="-1"><svg class="icon"><use href="#i-monitor"/></svg><span><strong>Windows</strong><small>Внутреннее тестирование</small></span><span class="platform-indicator" aria-hidden="true"></span></button>
+        <button class="platform-tab" role="tab" aria-selected="false" aria-controls="platform-panel" id="platform-linux" data-platform="linux" tabindex="-1"><svg class="icon"><use href="#i-server"/></svg><span><strong>Linux</strong><small>amd64 / arm64 · тестирование</small></span><span class="platform-indicator" aria-hidden="true"></span></button>
       </div>
+      <div id="platform-panel" class="platform-panel" role="tabpanel" aria-labelledby="platform-keenetic" tabindex="0"></div>
+      <p class="source-note">Инструкции основаны на документации HomeGuest 0.4.0. <a href="https://github.com/ilinskiy/homeguest-releases#совместимость" target="_blank" rel="noopener noreferrer">Матрица совместимости ↗</a></p>
     </section>
 
-    <section class="section" id="beta">
-      <div class="container beta-card">
-        <div>
-          <div class="eyebrow">PUBLIC BETA</div>
-          <h2>Помогите проверить HomeGuest на разных Keenetic</h2>
-          <p>
-            Сейчас особенно полезны установки на разных моделях Keenetic. Если HomeGuest установился,
-            работает с Yandex Smart Home или, наоборот, вы нашли проблему — оставьте Issue.
-          </p>
-          <div class="beta-actions">
-            <a class="button button-primary" href="https://github.com/ilinskiy/homeguest-releases/releases/tag/v0.4.0" target="_blank" rel="noreferrer">Открыть релиз</a>
-            <a class="button button-secondary" href="https://github.com/ilinskiy/homeguest-releases/issues/new/choose" target="_blank" rel="noreferrer">Сообщить об ошибке</a>
-          </div>
-        </div>
-        <div class="beta-stats">
-          <div><strong>0.4.0</strong><span>текущая версия</span></div>
-          <div><strong>Keenetic</strong><span>главная beta-платформа</span></div>
-          <div><strong>MIPSLE</strong><span>текущая публичная архитектура</span></div>
-        </div>
-      </div>
-    </section>
+    <section class="voice-banner container"><div class="voice-mark"><svg class="icon"><use href="#i-voice"/></svg></div><div><p class="eyebrow">НОВОЕ В РЕЛИЗЕ / 0.4.0</p><h3>Скажите это голосом Алисы.</h3><p>Гость выбирает разрешённую Яндекс Станцию и вводит короткое сообщение. Владелец может разместить текстовое объявление. Доступно в публичной beta 0.4.0.</p></div><button class="button secondary" id="voice-preview-button">Попробовать в демо <span aria-hidden="true">↗</span></button></section>
 
-    <section class="section faq">
-      <div class="container">
-        <div class="section-heading compact">
-          <div class="eyebrow">FAQ</div>
-          <h2>Коротко о главном</h2>
-        </div>
-        <div class="faq-grid">
-          <article>
-            <h3>HomeGuest работает через интернет?</h3>
-            <p>Основной интерфейс HomeGuest предназначен для работы внутри домашней сети. Для интеграции с Yandex Smart Home используется подключение к провайдеру.</p>
-          </article>
-          <article>
-            <h3>Гость увидит все мои устройства?</h3>
-            <p>Нет. Доступ задаётся владельцем отдельно. Подход HomeGuest — deny by default: устройство не показывается гостю, пока вы его явно не разрешили.</p>
-          </article>
-          <article>
-            <h3>Где хранится Yandex token?</h3>
-            <p>Токен хранится локально HomeGuest и не показывается обратно через интерфейс или API.</p>
-          </article>
-          <article>
-            <h3>Это уже стабильная версия?</h3>
-            <p>Нет. 0.4.0 — публичная версия для тестирования. Перед экспериментами с обновлениями рекомендуется делать резервную копию.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="final-cta">
-      <div class="container">
-        <div class="final-box">
-          <div>
-            <span class="eyebrow light">HOMEGUEST 0.4.0</span>
-            <h2>Попробуйте HomeGuest на своём Keenetic.</h2>
-            <p>Скачайте tester kit, установите HomeGuest и расскажите, как он работает в вашем доме.</p>
-          </div>
-          <a class="button button-white" href="https://github.com/ilinskiy/homeguest-releases/releases/download/v0.4.0/HomeGuest-0.4.0-Keenetic-Tester-Kit.zip">Скачать 0.4.0</a>
-        </div>
-      </div>
-    </section>
+    <section class="faq-section container"><div><p class="eyebrow">ЕЩЁ ПАРА ДЕТАЛЕЙ</p><h2>Перед первым<br>запуском.</h2></div><div class="faq-list">
+      <details><summary>Нужен ли гостю аккаунт Яндекса?<span aria-hidden="true">+</span></summary><p>Для гостевой страницы отдельный аккаунт не нужен. Интеграцию с Yandex настраивает владелец дома в административной части HomeGuest.</p></details>
+      <details><summary>Работает ли HomeGuest без интернета?<span aria-hidden="true">+</span></summary><p>Локальные инструкции и страница дома доступны в домашней сети. Для состояния и управления устройствами через Yandex, а также голосовых сообщений нужен доступ HomeGuest к сервисам Яндекса.</p></details>
+      <details><summary>Что понадобится на Keenetic?<span aria-hidden="true">+</span></summary><p>Entware / OPKG, постоянное хранилище /opt, SSH и архитектура Linux MIPSLE softfloat. Не каждая модель подходит: проверьте архитектуру до установки. Гостевой Wi-Fi должен разрешать доступ к адресу и порту HomeGuest.</p></details>
+      <details><summary>Это стабильный выпуск?<span aria-hidden="true">+</span></summary><p>Публичная версия 0.4.0 находится в beta-тестировании. Перед обновлением сделайте резервную копию. Пакеты и актуальные статусы платформ опубликованы в Releases.</p></details>
+    </div></section>
+    <section class="closing container"><h2>Пусть дом сам<br>объяснит, как всё устроено.</h2><a class="button primary" href="#start">Перейти к запуску <svg class="icon"><use href="#i-arrow"/></svg></a></section>
   </main>
-
-  <footer class="footer">
-    <div class="container footer-row">
-      <div>
-        <span class="brand-logo-frame footer-logo-frame" aria-hidden="true">
-          <img class="brand-logo" src="https://raw.githubusercontent.com/ilinskiy/homeguest-releases/main/assets/homeguest-logo-horizontal.png" alt="">
-        </span>
-        <span>Public Beta · 2026</span>
-      </div>
-      <div class="footer-links">
-        <a href="https://github.com/ilinskiy/homeguest-releases" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://github.com/ilinskiy/homeguest-releases/releases" target="_blank" rel="noreferrer">Releases</a>
-        <a href="https://github.com/ilinskiy/homeguest-releases/issues" target="_blank" rel="noreferrer">Issues</a>
-      </div>
-    </div>
-  </footer>
+  <footer class="site-footer container"><div><a class="brand footer-brand" href="#top" aria-label="HomeGuest — в начало"><img src="assets/homeguest-logo-horizontal.png" alt="HomeGuest" width="1800" height="880" loading="lazy"></a><p>Умный дом, понятный гостям.<br>© 2026 HomeGuest</p></div><div class="footer-links"><a href="https://github.com/ilinskiy/homeguest-releases/releases" target="_blank" rel="noopener noreferrer">Релизы ↗</a><a href="https://github.com/ilinskiy/homeguest-releases/issues/new/choose" target="_blank" rel="noopener noreferrer">Сообщить об ошибке ↗</a><span>PUBLIC BETA / 0.4.0</span></div></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="noscript">Для интерактивного демо и выбора платформы включите JavaScript. <a href="https://github.com/ilinskiy/homeguest-releases">Документация и инструкции HomeGuest</a></p></noscript>
 </body>
 </html>

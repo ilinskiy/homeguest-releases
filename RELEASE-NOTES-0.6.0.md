@@ -128,3 +128,21 @@ SHA256:
 - необезличенные backup-файлы.
 
 HomeGuest предназначен прежде всего для локальной домашней сети. Не публикуйте административную панель напрямую в Internet.
+## Public package
+
+HomeGuest-0.6.0-Keenetic-Tester-Kit.zip
+
+SHA256:
+
+3DA83FCB425CE711C489149DDAA56A0F345999FF9C2230CDF69834E71F9A2688
+
+The kit contains:
+
+- HomeGuest-0.6.0-update-keenetic-mipsle.zip
+- HomeGuest-0.6.0-keenetic-mipsle-softfloat.tar.gz
+- README-FIRST.md
+- INSTALL-KEENETIC.md
+- TEST-CHECKLIST.md
+- REPORT-BUG.md
+- RELEASE-NOTES-0.6.0.md
+- SHA256SUMS.txt

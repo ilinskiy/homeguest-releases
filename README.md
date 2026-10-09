@@ -4,9 +4,9 @@
 
 **HomeGuest** — локальное веб-приложение для домашней сети. Оно объединяет гостевые инструкции по дому и безопасный доступ к выбранным устройствам умного дома в одной простой веб-странице.
 
-Текущая публичная версия: **0.5.0**
+Текущая публичная версия: **0.6.0**
 
-[**Скачать HomeGuest 0.5.0 для Keenetic**](https://github.com/ilinskiy/homeguest-releases/releases/download/v0.5.0/HomeGuest-0.5.0-Keenetic-Tester-Kit.zip) · [Описание релиза](https://github.com/ilinskiy/homeguest-releases/releases/tag/v0.5.0) · [Сообщить об ошибке](https://github.com/ilinskiy/homeguest-releases/issues/new/choose)
+[**Скачать HomeGuest 0.6.0 для Keenetic**](https://github.com/ilinskiy/homeguest-releases/releases/download/v0.6.0/HomeGuest-0.6.0-Keenetic-Tester-Kit.zip) · [Описание релиза](https://github.com/ilinskiy/homeguest-releases/releases/tag/v0.6.0) · [Сообщить об ошибке](https://github.com/ilinskiy/homeguest-releases/issues/new/choose)
 
 ## Как выглядит HomeGuest
 
@@ -62,7 +62,7 @@ HomeGuest создаёт одну локальную страницу, где г
 
 ## Основные возможности
 
-| Возможность | 0.5.0 |
+| Возможность | 0.6.0 |
 |---|:---:|
 | Гостевая веб-страница | ✅ |
 | Инструкции по помещениям и оборудованию | ✅ |
@@ -106,12 +106,12 @@ HomeGuest устанавливается на устройство в домаш
 
 Для первой установки скачайте готовый комплект:
 
-**[HomeGuest-0.5.0-Keenetic-Tester-Kit.zip](https://github.com/ilinskiy/homeguest-releases/releases/download/v0.5.0/HomeGuest-0.5.0-Keenetic-Tester-Kit.zip)**
+**[HomeGuest-0.6.0-Keenetic-Tester-Kit.zip](https://github.com/ilinskiy/homeguest-releases/releases/download/v0.6.0/HomeGuest-0.6.0-Keenetic-Tester-Kit.zip)**
 
 SHA256:
 
 ```text
-8985C99492994D886D8171A8AC7A0211AA4C8567DDCAA84114BC45CE8185E848
+3DA83FCB425CE711C489149DDAA56A0F345999FF9C2230CDF69834E71F9A2688
 ```
 
 ### 2. Прочитать инструкцию
@@ -146,7 +146,7 @@ INSTALL-KEENETIC.md
 
 ## Совместимость
 
-Публичная версия 0.5.0 сейчас распространяется для следующей платформы:
+Публичная версия 0.6.0 сейчас распространяется для следующей платформы:
 
 | Платформа | Архитектура | Статус |
 |---|---|---|
@@ -175,9 +175,9 @@ INSTALL-KEENETIC.md
 
 **[Создать Bug Report](https://github.com/ilinskiy/homeguest-releases/issues/new/choose)**
 
-## Что уже проверено в 0.5.0
+## Что уже проверено в 0.6.0
 
-Перед публичным выпуском 0.5.0 были проверены:
+Перед публичным выпуском 0.6.0 были проверены:
 
 - локальные Go tests;
 - `go vet`;
@@ -206,7 +206,7 @@ INSTALL-KEENETIC.md
 - серверный запрет отправки на недоступную колонку;
 - health/readiness и проверка базы данных.
 
-Подробнее: [RELEASE-NOTES-0.5.0.md](RELEASE-NOTES-0.5.0.md)
+Подробнее: [RELEASE-NOTES-0.6.0.md](RELEASE-NOTES-0.6.0.md)
 
 ## Безопасность
 
@@ -230,7 +230,7 @@ HomeGuest находится в стадии beta-тестирования.
 
 Текущий релиз:
 
-**[HomeGuest 0.5.0 — Public Beta for Keenetic](https://github.com/ilinskiy/homeguest-releases/releases/tag/v0.5.0)**
+**[HomeGuest 0.6.0 — Public Beta for Keenetic](https://github.com/ilinskiy/homeguest-releases/releases/tag/v0.6.0)**
 
 История изменений: [CHANGELOG.md](CHANGELOG.md)
 
@@ -253,6 +253,6 @@ HomeGuest находится в стадии beta-тестирования.
 
 ---
 
-**HomeGuest 0.5.0** · Public Beta · 2026
+**HomeGuest 0.6.0** · Public Beta · 2026
 
 Copyright © 2026 HomeGuest. All rights reserved.

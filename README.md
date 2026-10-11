@@ -6,7 +6,7 @@
 
 Текущая публичная версия: **0.7.0**
 
-[**Скачать HomeGuest 0.7.0 для Keenetic**](https://github.com/ilinskiy/homeguest-releases/releases/download/v0.7.0/HomeGuest-0.7.0-Keenetic-Tester-Kit.zip) · [Описание релиза](https://github.com/ilinskiy/homeguest-releases/releases/tag/v0.7.0) · [Сообщить об ошибке](https://github.com/ilinskiy/homeguest-releases/issues/new/choose)
+[**Скачать HomeGuest 0.7.0 для Keenetic**](https://github.com/ilinskiy/homeguest-releases/releases/download/v0.7.0/HomeGuest-0.7.0-Keenetic-Tester-Kit.zip) · [Описание релиза](https://github.com/ilinskiy/homeguest-releases/releases/tag/v0.7.0) · [История изменений](CHANGELOG.md) · [Сообщить об ошибке](https://github.com/ilinskiy/homeguest-releases/issues/new/choose)
 
 ## Как выглядит HomeGuest
 

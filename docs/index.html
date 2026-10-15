@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="HomeGuest — локальная страница дома для гостей. Инструкции, комнаты и управление разрешёнными устройствами. Попробуйте демо и выберите платформу запуска.">
+  <meta name="description" content="HomeGuest — локальная страница дома для гостей: инструкции, комнаты и безопасное управление устройствами Yandex Smart Home и SmartLife / Tuya Cloud.">
   <meta name="theme-color" content="#f6f7f5">
   <link rel="canonical" href="https://gethomeguest.com/">
   <title>HomeGuest — умный дом, понятный гостям</title>
   <link rel="icon" href="assets/homeguest-logo-mark.png" type="image/png">
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=0.8.0">
+  <script src="app.js?v=0.8.0" defer></script>
 </head>
 <body>
   <svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
@@ -65,9 +65,9 @@
       <div class="section-heading"><p class="eyebrow">01 / ВОЗМОЖНОСТИ</p><h2>Меньше объяснений.<br>Больше гостеприимства.</h2><p class="section-lead">Соберите знания о доме в одном месте.<br>Дайте гостям ровно столько доступа, сколько нужно.</p></div>
       <div class="feature-grid">
         <article class="feature"><span class="feature-number">01</span><svg class="icon"><use href="#i-book"/></svg><h3>Инструкции под рукой</h3><p>Текст, изображения и ссылки по комнатам и оборудованию. Правила дома — на той же странице.</p></article>
-        <article class="feature"><span class="feature-number">02</span><svg class="icon"><use href="#i-bulb"/></svg><h3>Дом отвечает на действия</h3><p>Состояние выбранных устройств, управление светом и гостевые сценарии с несколькими действиями.</p></article>
+        <article class="feature"><span class="feature-number">02</span><svg class="icon"><use href="#i-bulb"/></svg><h3>Yandex + SmartLife / Tuya</h3><p>Несколько провайдеров одновременно: состояние устройств, управление светом и яркостью в одном интерфейсе.</p></article>
         <article class="feature"><span class="feature-number">03</span><span class="feature-typographic-icon" aria-hidden="true">°C</span><h3>Климат без догадок</h3><p>Температура и влажность с подключённых датчиков. Понятные названия и комментарии владельца.</p></article>
-        <article class="feature"><span class="feature-number">04</span><svg class="icon"><use href="#i-house"/></svg><h3>Каждой комнате — своё</h3><p>Произвольные комнаты и устройства, даже без Yandex. Удобная структура для конкретного дома.</p></article>
+        <article class="feature"><span class="feature-number">04</span><svg class="icon"><use href="#i-house"/></svg><h3>Комнаты без дублей</h3><p>Одинаковые комнаты Yandex и Tuya объединяются, а уникальные комнаты каждого провайдера остаются отдельными.</p></article>
         <article class="feature"><span class="feature-number">05</span><span class="feature-typographic-icon small" aria-hidden="true">QR</span><h3>Один адрес для гостя</h3><p>Гость подключается к Wi-Fi и открывает страницу по ссылке или QR-коду. Приложение устанавливать не нужно.</p></article>
         <article class="feature"><span class="feature-number">06</span><svg class="icon"><use href="#i-shield"/></svg><h3>Контроль у владельца</h3><p>Отдельная админ-панель, выбор доступных устройств, резервные копии, диагностика и откат обновлений.</p></article>
       </div>
@@ -100,20 +100,20 @@
         <button class="platform-tab" role="tab" aria-selected="false" aria-controls="platform-panel" id="platform-linux" data-platform="linux" tabindex="-1"><svg class="icon"><use href="#i-server"/></svg><span><strong>Linux</strong><small>amd64 / arm64 · тестирование</small></span><span class="platform-indicator" aria-hidden="true"></span></button>
       </div>
       <div id="platform-panel" class="platform-panel" role="tabpanel" aria-labelledby="platform-keenetic" tabindex="0"></div>
-      <p class="source-note">Инструкции основаны на документации HomeGuest 0.4.0. <a href="https://github.com/ilinskiy/homeguest-releases#совместимость" target="_blank" rel="noopener noreferrer">Матрица совместимости ↗</a></p>
+      <p class="source-note">Инструкции соответствуют HomeGuest 0.8.0. <a href="https://github.com/ilinskiy/homeguest-releases#совместимость" target="_blank" rel="noopener noreferrer">Матрица совместимости ↗</a></p>
     </section>
 
-    <section class="voice-banner container"><div class="voice-mark"><svg class="icon"><use href="#i-voice"/></svg></div><div><p class="eyebrow">НОВОЕ В РЕЛИЗЕ / 0.4.0</p><h3>Скажите это голосом Алисы.</h3><p>Гость выбирает разрешённую Яндекс Станцию и вводит короткое сообщение. Владелец может разместить текстовое объявление. Доступно в публичной beta 0.4.0.</p></div><button class="button secondary" id="voice-preview-button">Попробовать в демо <span aria-hidden="true">↗</span></button></section>
+    <section class="voice-banner container"><div class="voice-mark"><svg class="icon"><use href="#i-router"/></svg></div><div><p class="eyebrow">НОВОЕ В РЕЛИЗЕ / 0.8.0</p><h3>Yandex + SmartLife / Tuya. Вместе.</h3><p>HomeGuest одновременно работает с несколькими провайдерами, объединяет одинаковые комнаты и показывает источник каждого устройства. Гостевые права остаются едиными.</p></div><a class="button secondary" href="https://github.com/ilinskiy/homeguest-releases/releases/tag/v0.8.0" target="_blank" rel="noopener noreferrer">Что нового <span aria-hidden="true">↗</span></a></section>
 
     <section class="faq-section container"><div><p class="eyebrow">ЕЩЁ ПАРА ДЕТАЛЕЙ</p><h2>Перед первым<br>запуском.</h2></div><div class="faq-list">
       <details><summary>Нужен ли гостю аккаунт Яндекса?<span aria-hidden="true">+</span></summary><p>Для гостевой страницы отдельный аккаунт не нужен. Интеграцию с Yandex настраивает владелец дома в административной части HomeGuest.</p></details>
-      <details><summary>Работает ли HomeGuest без интернета?<span aria-hidden="true">+</span></summary><p>Локальные инструкции и страница дома доступны в домашней сети. Для состояния и управления устройствами через Yandex, а также голосовых сообщений нужен доступ HomeGuest к сервисам Яндекса.</p></details>
+      <details><summary>Работает ли HomeGuest без интернета?<span aria-hidden="true">+</span></summary><p>Локальные инструкции и страница дома доступны в домашней сети. Для облачного состояния и управления через Yandex Smart Home или SmartLife / Tuya Cloud нужен доступ HomeGuest к соответствующим сервисам.</p></details>
       <details><summary>Что понадобится на Keenetic?<span aria-hidden="true">+</span></summary><p>Entware / OPKG, постоянное хранилище /opt, SSH и архитектура Linux MIPSLE softfloat. Не каждая модель подходит: проверьте архитектуру до установки. Гостевой Wi-Fi должен разрешать доступ к адресу и порту HomeGuest.</p></details>
-      <details><summary>Это стабильный выпуск?<span aria-hidden="true">+</span></summary><p>Публичная версия 0.4.0 находится в beta-тестировании. Перед обновлением сделайте резервную копию. Пакеты и актуальные статусы платформ опубликованы в Releases.</p></details>
+      <details><summary>Это стабильный выпуск?<span aria-hidden="true">+</span></summary><p>Публичная версия 0.8.0 находится в beta-тестировании. Перед обновлением сделайте резервную копию. Пакеты и актуальные статусы платформ опубликованы в Releases.</p></details>
     </div></section>
     <section class="closing container"><h2>Пусть дом сам<br>объяснит, как всё устроено.</h2><a class="button primary" href="#start">Перейти к запуску <svg class="icon"><use href="#i-arrow"/></svg></a></section>
   </main>
-  <footer class="site-footer container"><div><a class="brand footer-brand" href="#top" aria-label="HomeGuest — в начало"><img src="assets/homeguest-logo-horizontal.png" alt="HomeGuest" width="1800" height="880" loading="lazy"></a><p>Умный дом, понятный гостям.<br>© 2026 HomeGuest</p></div><div class="footer-links"><a href="https://github.com/ilinskiy/homeguest-releases/releases" target="_blank" rel="noopener noreferrer">Релизы ↗</a><a href="https://github.com/ilinskiy/homeguest-releases/issues/new/choose" target="_blank" rel="noopener noreferrer">Сообщить об ошибке ↗</a><span>PUBLIC BETA / 0.4.0</span></div></footer>
+  <footer class="site-footer container"><div><a class="brand footer-brand" href="#top" aria-label="HomeGuest — в начало"><img src="assets/homeguest-logo-horizontal.png" alt="HomeGuest" width="1800" height="880" loading="lazy"></a><p>Умный дом, понятный гостям.<br>© 2026 HomeGuest</p></div><div class="footer-links"><a href="https://github.com/ilinskiy/homeguest-releases/releases" target="_blank" rel="noopener noreferrer">Релизы ↗</a><a href="https://github.com/ilinskiy/homeguest-releases/issues/new/choose" target="_blank" rel="noopener noreferrer">Сообщить об ошибке ↗</a><span>PUBLIC BETA / 0.8.0</span></div></footer>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <noscript><p class="noscript">Для интерактивного демо и выбора платформы включите JavaScript. <a href="https://github.com/ilinskiy/homeguest-releases">Документация и инструкции HomeGuest</a></p></noscript>
 </body>

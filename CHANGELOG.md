@@ -1,5 +1,39 @@
 # HomeGuest Changelog
 
+## 0.8.0
+
+Multi-provider релиз HomeGuest: Yandex Smart Home + SmartLife / Tuya Cloud.
+
+### Новое
+
+- каталог нескольких провайдеров с сохранением Yandex как primary provider;
+- SmartLife / Tuya Cloud provider;
+- официальная HMAC-SHA256 авторизация Tuya;
+- импорт Tuya устройств, состояний и поддерживаемых capabilities;
+- on/off и brightness для подтверждённых Tuya datapoints;
+- административная карточка SmartLife / Tuya;
+- импорт SmartLife homes и rooms;
+- объединение одинаковых комнат Yandex / Tuya;
+- provider badges Yandex / Tuya / HomeGuest.
+
+### Безопасность и совместимость
+
+- Tuya credentials хранятся отдельно от SQLite и Git;
+- unknown vendor datapoints игнорируются;
+- существующая guest ACL модель применяется ко всем провайдерам;
+- Yandex продолжает работать при отсутствии или ошибке Tuya;
+- health/readiness сохраняют совместимость с primary provider.
+
+### Проверено
+
+- `go test ./...`;
+- Windows amd64, Linux amd64, Linux arm64 и Keenetic MIPSLE softfloat builds;
+- обновление и работа HomeGuest 0.8.0 на реальном Keenetic;
+- Yandex + Tuya одновременно;
+- Tuya on/off и brightness;
+- 2 homes, 8 rooms, 30 room assignments;
+- объединение комнат и provider badges.
+
 ## 0.7.0
 
 Релиз HomeGuest с расширенным управлением гостями и сводной административной панелью.
